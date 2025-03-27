@@ -13,10 +13,9 @@ namespace Chronos
 
             crono1.Start();
             Thread.Sleep(500);
-            crono1.Stop();
-
             crono2.Start();
             Thread.Sleep(250);
+            crono1.Stop();
             crono2.Stop();
 
             Console.WriteLine($"Cronômetro 1: {crono1.ElapsedMilliseconds / 1000.0:F4} segundos \nCronômetro 2: {crono2.ElapsedMilliseconds / 1000.0:F4}");
