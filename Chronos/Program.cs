@@ -1,13 +1,25 @@
 ﻿using System;
+using System.Diagnostics 
 using System.Threading
 
 namespace Chronos
 {
     public class Program
     {
-        public class Stopwatch
+        private static void Main(string[] args)
         {
-            Stopwatch cron1 = new Stopwatch();
+            Stopwatch crono1 = new Stopwatch();
+            Stopwatch crono2 = new Stopwatch();
+
+            crono1.Start();
+            Thread.Sleep(500);
+            crono1.Stop();
+
+            crono2.Start();
+            Thread.Sleep(250);
+            crono2.Stop();
+
+            Console.WriteLine($"Cronômetro 1: {crono1.ElapsedMilliseconds / 1000.0:F4} segundos \nCronômetro 2: {crono2.ElapsedMilliseconds / 1000.0:F4}");
         }
-    }    
+    }
 }
