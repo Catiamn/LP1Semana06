@@ -2,29 +2,29 @@
  
  namespace MyRPG
  {
-     public class MyRPG
-     {
+    public class MyRPG
+    {
         public enum Hardness
-     {
+    {
          Easy,
          Normal,
          Hard
-     }
+    }
      
-         private string name;
-         private float health;
-         private float shield;
-         public MyRPG(string name)
-         {
+        private string name;
+        private float health;
+        private float shield;
+        public MyRPG(string name)
+        {
              this.name = name;
              health = 100;
              shield = 0;
-         }
+        }
  
-         public string GetName()
-         {
+        public string GetName()
+        {
              return name;
-         }
+        }
  
          public void TakeDamage(float damage)
          {
